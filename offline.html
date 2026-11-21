@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <title>连不上 · Sweetheart</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        text-align: center;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+          sans-serif;
+        background: #f7f8fa;
+        color: #1b1c1f;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* 用 CSS 画标记：图标文件本身带深色底，放在浅色页上会露出一圈黑边 */
+      .mark {
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        margin-bottom: 24px;
+        background:
+          radial-gradient(120% 120% at 16% 10%, #ffc2d0 0%, rgba(255, 194, 208, 0) 58%),
+          radial-gradient(120% 120% at 86% 16%, #bcc6ff 0%, rgba(188, 198, 255, 0) 60%),
+          radial-gradient(130% 130% at 60% 98%, #a9eddd 0%, rgba(169, 237, 221, 0) 64%),
+          #f1f2f7;
+        box-shadow: 0 14px 34px rgba(24, 28, 40, 0.14);
+      }
+      h1 {
+        font-size: 22px;
+        font-weight: 600;
+        margin: 0 0 12px;
+        letter-spacing: 0.01em;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0 0 28px;
+        max-width: 340px;
+        opacity: 0.68;
+      }
+      button {
+        font: inherit;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 12px 34px;
+        border: 0;
+        border-radius: 999px;
+        background: #3964fe;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:active {
+        transform: scale(0.98);
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #101114;
+          color: #eceef2;
+        }
+        .mark {
+          background:
+            radial-gradient(120% 120% at 16% 10%, #8f5566 0%, rgba(143, 85, 102, 0) 60%),
+            radial-gradient(120% 120% at 86% 16%, #5b6591 0%, rgba(91, 101, 145, 0) 62%),
+            radial-gradient(130% 130% at 60% 98%, #4d8a7f 0%, rgba(77, 138, 127, 0) 66%),
+            #191b21;
+          box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mark" aria-hidden="true"></div>
+    <h1>连不上</h1>
+    <p>网络好像断了。聊天记录还在这台设备上，接上网络就能继续。</p>
+    <button type="button" onclick="location.reload()">重试</button>
+  </body>
+</html>
